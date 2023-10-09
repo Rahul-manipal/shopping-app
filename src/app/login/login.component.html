@@ -1,0 +1,14 @@
+<h3>Login to your account</h3>
+
+<br>
+<form class="was-validated" (ngSubmit)="login()">
+    <label for="custid"> Customer Id:</label> <br>
+<input type="text" name="custid" [(ngModel)]="custid" class="form-control" required> <br> <br>
+<label for="password">Password</label> <br> 
+<input type="password" name="password" [(ngModel)]="password" class="form-control" required> <br> <br>
+<input type="submit" name="submit" value="login" class="btn btn-primary"> <br> <br>
+<a href="/register">Register Yourself</a>
+</form>
+
+<h2>{{error}}</h2>
+

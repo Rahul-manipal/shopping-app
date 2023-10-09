@@ -1,0 +1,35 @@
+<form (ngSubmit)="save()" class="was-validated">
+
+    Customer ID:
+
+    <input name="custId" [(ngModel)]="c.custid" class="form-control" required>
+
+    <br>
+
+    Customer Name:
+
+    <input name="name" [(ngModel)]="c.name"  class="form-control" required>
+
+    <br>
+
+    Customer email:
+
+    <input name="email" [(ngModel)]="c.email"  class="form-control" required>
+
+    <br>
+
+    Customer Password:
+
+    <input type="password" name="password" [(ngModel)]="c.password"  class="form-control" required>
+
+    <br>
+
+    Customer Mobile:
+
+    <input name="mobile" [(ngModel)]="c.mobile"  class="form-control" required>
+
+    <br>
+
+    <button type="submit" class="btn btn-primary">Register Customer</button>
+
+</form>

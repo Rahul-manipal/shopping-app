@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">User dashsboard</a>
+  
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/listofproducts']">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/listbycategory']">Search By Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/mycart']">Shopping cart</a>
+      </li>
+      </ul>
+      </nav>
+      <br>
+      <form class="was-validated">
+        Category: <input type="text" name="cat" class="form-control" [(ngModel)]="cat" required>
+        <input type="button" name="Search" class="btn btn-primary" (click)="search()" value="Search">
+      </form>
+      <table class="table table-bordered table-dark">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody><tr *ngFor="let p of products">
+            <td>{{p.name}}</td>
+            <td> <img src="assets\phone.jpg" height="80" width="120" alt="Bat image"> </td>
+            <td>{{p.category}}</td>
+            <td>{{p.price}}</td>
+            <td><button class="btn btn-primary" >Add To Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
